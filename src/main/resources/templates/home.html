@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    text-align:center;
+    color:white;
+}
+
+h1{
+    font-size:70px;
+    text-shadow:2px 2px 10px black;
+}
+
+p{
+    font-size:22px;
+    margin-top:10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>HOME</h1>
+    <p>Welcome to the Application</p>
+     <br>
+    <a th:href="@{/user/home}">Go to user Home</a>
+<br>
+<a th:href="@{/admin/home}">Go to Admin Home</a>
+    
+</div>
+
+</body>
+</html>

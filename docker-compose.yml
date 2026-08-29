@@ -1,0 +1,25 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - smy-network
+
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: securitydb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - smy-network
+
+networks:
+  smy-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
